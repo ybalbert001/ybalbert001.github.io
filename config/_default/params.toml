@@ -1,0 +1,36 @@
+colorScheme = "blowfish"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+
+mainSections = ["posts"]
+
+[homepage]
+  layout = "custom"
+  showRecent = false
+
+[header]
+  layout = "fixed-fill-blur"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showEdit = false
+  showWordCount = false
+  showReadingTime = false
+  showPagination = true
+
+[list]
+  showCards = true
+  cardView = true
+  cardViewScreenWidth = false
+  showSummary = true

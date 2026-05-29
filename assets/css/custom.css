@@ -1,0 +1,113 @@
+/* Academic-style clean layout */
+
+.academic-page {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+.academic-page h1,
+.academic-page h2,
+.academic-page h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Section titles */
+.academic-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.dark .academic-section-title {
+  color: #f5f5f5;
+  border-bottom-color: #f5f5f5;
+}
+
+/* Subsection titles */
+.academic-subsection-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.dark .academic-subsection-title {
+  color: #e5e5e5;
+}
+
+.academic-period {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.dark .academic-period {
+  color: #999;
+}
+
+/* Lists */
+.academic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.academic-list li {
+  padding: 0.3rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.dark .academic-list li {
+  color: #ccc;
+}
+
+/* Links */
+.academic-link {
+  color: #1a56db;
+  text-decoration: none;
+}
+
+.academic-link:hover {
+  text-decoration: underline;
+}
+
+.dark .academic-link {
+  color: #7cacf8;
+}
+
+/* Tags */
+.academic-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: "SF Mono", "Fira Code", monospace;
+  color: #555;
+  background: #f0f0f0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  margin-right: 0.4rem;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.dark .academic-tag {
+  color: #bbb;
+  background: #333;
+}
+
+/* Meta text */
+.academic-meta {
+  font-size: 0.75rem;
+  color: #888;
+  margin-left: 0.3rem;
+}
+
+.dark .academic-meta {
+  color: #777;
+}

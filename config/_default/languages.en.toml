@@ -1,0 +1,21 @@
+locale = "en"
+label = "English"
+weight = 2
+title = "YuanBo Li - Tech Portfolio"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  dateFormat = "January 2, 2006"
+  description = "AWS GenAI Specialist SA - LLM Inference / Dify / Translation / RAG"
+
+[params.author]
+  name = "YuanBo Li"
+  image = "img/author.jpg"
+  headline = "GenAI Specialist Solution Architect @ AWS"
+  bio = "Focused on LLM inference optimization, AI application platforms, and retrieval-augmented generation"
+  links = [
+    { email = "mailto:ybalbert@amazon.com" },
+    { github = "https://github.com/ybalbert" },
+    { bilibili = "https://space.bilibili.com/259231104" },
+  ]

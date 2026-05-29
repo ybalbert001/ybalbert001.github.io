@@ -1,0 +1,7 @@
+public/
+resources/
+.hugo_build.lock
+_reference/
+node_modules/
+.DS_Store
+亚马逊云科技生成式AI时代的智能翻译创新与实践-白皮书.pdf

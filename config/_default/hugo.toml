@@ -1,0 +1,13 @@
+theme = "blowfish"
+baseURL = "https://ybalbert001.github.io/"
+defaultContentLanguage = "zh-cn"
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
