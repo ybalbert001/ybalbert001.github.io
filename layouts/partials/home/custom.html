@@ -1,4 +1,5 @@
-{{/* Academic-style Homepage */}}
+{{/* Academic-style Homepage - Bilingual */}}
+{{ $lang := .Lang }}
 <div class="academic-page max-w-3xl mx-auto px-4 py-10">
 
   {{/* ===== HEADER ===== */}}
@@ -11,82 +12,115 @@
 
     <div class="mt-4 text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
       <p>Email: <a href="mailto:ybalbert@amazon.com" class="academic-link">ybalbert@amazon.com</a></p>
-      <p>WeChat: <a href="https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g" target="_blank" class="academic-link">AI猿智慧</a> (1,209 {{ i18n "followers" | default "关注" }})</p>
-      <p>Bilibili: <a href="https://space.bilibili.com/259231104" target="_blank" class="academic-link">前滩猿神</a> (210 {{ i18n "followers" | default "粉丝" }})</p>
+      {{ if eq $lang "zh-cn" }}
+      <p>微信公众号: <a href="https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g" target="_blank" class="academic-link">AI猿智慧</a> (1,209 关注)</p>
+      <p>B站: <a href="https://space.bilibili.com/259231104" target="_blank" class="academic-link">前滩猿神</a> (210 粉丝)</p>
+      {{ else }}
+      <p>WeChat: <a href="https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g" target="_blank" class="academic-link">AI猿智慧</a> (1,209 followers)</p>
+      <p>Bilibili: <a href="https://space.bilibili.com/259231104" target="_blank" class="academic-link">前滩猿神</a> (210 followers)</p>
+      {{ end }}
     </div>
   </header>
 
   {{/* ===== RESEARCH AREAS ===== */}}
   <section class="mb-10">
-    <h2 class="academic-section-title">{{ i18n "research_areas" | default "研究方向" }}</h2>
+    <h2 class="academic-section-title">{{ if eq $lang "zh-cn" }}研究方向{{ else }}Research{{ end }}</h2>
 
     {{/* --- LLM Inference --- */}}
     <div class="mb-8">
       <h3 class="academic-subsection-title">LLM Inference <span class="academic-period">2025 – present</span></h3>
+      {{ if eq $lang "zh-cn" }}
       <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
-        {{ i18n "inference_desc" | default "研究 AWS 上部署运行 DeepSeek 等开源大模型的最佳实践，SGLang 等推理引擎在 AWS GPU 实例上的性能评测，多机型性价比评测。" }}
+        研究 AWS 上部署运行 DeepSeek 等开源大模型的最佳实践，SGLang 等推理引擎在 AWS GPU 实例上的性能评测，多机型性价比评测。
       </p>
+      {{ else }}
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+        Best practices for deploying open-source LLMs (DeepSeek, etc.) on AWS. Performance benchmarking of inference engines (SGLang) across GPU instance types including next-gen B200.
+      </p>
+      {{ end }}
       <ul class="academic-list">
-        <li><span class="academic-tag">视频</span> <a href="https://space.bilibili.com/259231104/lists/8200803" target="_blank" class="academic-link">大模型推理-深入浅出系列</a> <span class="academic-meta">播放 3,028</span></li>
+        <li><span class="academic-tag">Video</span> <a href="https://space.bilibili.com/259231104/lists/8200803" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}大模型推理-深入浅出系列{{ else }}LLM Inference Deep Dive Series{{ end }}</a> <span class="academic-meta">{{ if eq $lang "zh-cn" }}播放 3,028{{ else }}3,028 views{{ end }}</span></li>
       </ul>
     </div>
 
     {{/* --- Dify on AWS --- */}}
     <div class="mb-8">
-      <h3 class="academic-subsection-title">GenAI 平台 - Dify on AWS <span class="academic-period">2024 – 2025</span></h3>
+      <h3 class="academic-subsection-title">GenAI Platform - Dify on AWS <span class="academic-period">2024 – 2025</span></h3>
+      {{ if eq $lang "zh-cn" }}
       <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
-        {{ i18n "dify_desc" | default "Dify Top Contributor，打造 Dify 中的 AWS 生态，使 Bedrock 成为 Dify 支持最好的模型供应商，支持 SageMaker 私有化部署的 5 类 GenAI 模型接入 Dify。" }}
+        Dify Top Contributor，打造 Dify 中的 AWS 生态，使 Bedrock 成为 Dify 支持最好的模型供应商，支持 SageMaker 私有化部署的 5 类 GenAI 模型接入 Dify。
       </p>
+      {{ else }}
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+        Dify Top Contributor. Building the AWS ecosystem within Dify, making Bedrock the best-supported model provider. Enabling 5 categories of SageMaker-deployed GenAI models to integrate with Dify.
+      </p>
+      {{ end }}
       <ul class="academic-list">
         <li><span class="academic-tag">Code</span> <a href="https://github.com/aws-samples/dify-aws-tool" target="_blank" class="academic-link">aws-samples/dify-aws-tool</a> <span class="academic-meta">⭐ 178, Fork 40</span></li>
         <li><span class="academic-tag">Code</span> <a href="https://github.com/langgenius/dify" target="_blank" class="academic-link">langgenius/dify</a> <span class="academic-meta">Top Contributor, 21 commits merged</span></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/integrate-dify-and-aws-services-to-enable-more-flexible-translation-workflows/" target="_blank" class="academic-link">集成 Dify 和 AWS Service 实现更具灵活性的翻译工作流</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/integrate-dify-and-aws-services-to-enable-more-flexible-translation-workflows/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}集成 Dify 和 AWS Service 实现更具灵活性的翻译工作流{{ else }}Integrating Dify and AWS Services for Flexible Translation Workflows{{ end }}</a></li>
       </ul>
     </div>
 
     {{/* --- LLM Translation --- */}}
     <div class="mb-8">
       <h3 class="academic-subsection-title">LLM Translation <span class="academic-period">2024 – 2025</span></h3>
+      {{ if eq $lang "zh-cn" }}
       <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
-        {{ i18n "translation_desc" | default "大模型翻译场景最佳实践：专词映射、RAG优化、Finetune、工作流构建。发布翻译技术白皮书，在上海 Summit 对外发布。" }}
+        大模型翻译场景最佳实践：专词映射、RAG优化、Finetune、工作流构建。发布翻译技术白皮书，在上海 Summit 对外发布。
       </p>
+      {{ else }}
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+        Best practices for LLM-based translation: terminology mapping, RAG optimization, fine-tuning, and workflow orchestration. Published a technical whitepaper at AWS Shanghai Summit 2025.
+      </p>
+      {{ end }}
       <ul class="academic-list">
         <li><span class="academic-tag">Code</span> <a href="https://github.com/aws-samples/rag-based-translation-with-dynamodb-and-bedrock" target="_blank" class="academic-link">aws-samples/rag-based-translation-with-dynamodb-and-bedrock</a></li>
-        <li><span class="academic-tag">Paper</span> <a href="/亚马逊云科技生成式AI时代的智能翻译创新与实践-白皮书.pdf" target="_blank" class="academic-link">亚马逊云科技生成式AI时代的大模型翻译创新与实践</a> <span class="academic-meta">2025 Shanghai Summit</span></li>
-        <li><span class="academic-tag">Talk</span> <a href="https://emxpb.xetlk.com/sl/1zRMz6" target="_blank" class="academic-link">基于 LLaMA Factory 开源框架，无代码实现大模型的微调训练</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/implementing-llm-translation-with-word-mapping-capabilities-based-on-aws-services/" target="_blank" class="academic-link">基于 AWS 服务实现具备专词映射能力的大语言模型翻译</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/translation-quality-detection-using-llm-fine-tuning-part-one/" target="_blank" class="academic-link">LLM 微调实践 – 翻译质量检测（上）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/translation-quality-detection-using-llm-fine-tuning-part-two/" target="_blank" class="academic-link">LLM 微调实践 – 翻译质量检测（下）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/" target="_blank" class="academic-link">基于 SageMaker 和 LLaMA-Factory 打造无代码模型微调部署平台</a></li>
+        <li><span class="academic-tag">Paper</span> <a href="/亚马逊云科技生成式AI时代的智能翻译创新与实践-白皮书.pdf" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}亚马逊云科技生成式AI时代的大模型翻译创新与实践{{ else }}AWS Intelligent Translation Innovation and Practice in the Generative AI Era{{ end }}</a> <span class="academic-meta">{{ if eq $lang "zh-cn" }}2025 上海 Summit 发布{{ else }}Shanghai Summit 2025{{ end }}</span></li>
+        <li><span class="academic-tag">Talk</span> <a href="https://emxpb.xetlk.com/sl/1zRMz6" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}基于 LLaMA Factory 开源框架，无代码实现大模型的微调训练{{ else }}No-Code LLM Fine-Tuning with LLaMA Factory{{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/implementing-llm-translation-with-word-mapping-capabilities-based-on-aws-services/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}基于 AWS 服务实现具备专词映射能力的大语言模型翻译{{ else }}Implementing LLM Translation with Terminology Mapping on AWS{{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/translation-quality-detection-using-llm-fine-tuning-part-one/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}LLM 微调实践 – 翻译质量检测（上）{{ else }}LLM Fine-Tuning for Translation Quality Detection (Part 1){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/translation-quality-detection-using-llm-fine-tuning-part-two/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}LLM 微调实践 – 翻译质量检测（下）{{ else }}LLM Fine-Tuning for Translation Quality Detection (Part 2){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/building-llm-model-hub-based-on-llamafactory-and-easyr1/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}基于 SageMaker 和 LLaMA-Factory 打造无代码模型微调部署平台{{ else }}Building a No-Code Model Fine-Tuning Platform with SageMaker and LLaMA-Factory{{ end }}</a></li>
       </ul>
     </div>
 
     {{/* --- RAG --- */}}
     <div class="mb-8">
-      <h3 class="academic-subsection-title">RAG 检索增强生成 <span class="academic-period">2023 – 2024</span></h3>
+      <h3 class="academic-subsection-title">RAG {{ if eq $lang "zh-cn" }}检索增强生成{{ else }}(Retrieval-Augmented Generation){{ end }} <span class="academic-period">2023 – 2024</span></h3>
+      {{ if eq $lang "zh-cn" }}
       <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
-        {{ i18n "rag_desc" | default "GCR RAG 知识问答解决方案的主要维护者。" }}
+        GCR RAG 知识问答解决方案的主要维护者。
       </p>
+      {{ else }}
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+        Primary maintainer of the GCR RAG knowledge Q&A solution. Built a multi-tenant demo platform supporting 54 Account SAs.
+      </p>
+      {{ end }}
       <ul class="academic-list">
         <li><span class="academic-tag">Code</span> <a href="https://github.com/aws-samples/private-llm-qa-bot" target="_blank" class="academic-link">aws-samples/private-llm-qa-bot</a> <span class="academic-meta">⭐ 285, Fork 69</span></li>
-        <li><span class="academic-tag">Talk</span> <a href="https://www.infoq.cn/video/mggw3JCRiXY1TKIN8GPy" target="_blank" class="academic-link">基于 RAG 构建生成式 AI 应用最佳实践与"避坑指南"</a> <span class="academic-meta">QCon 2024</span></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-1" target="_blank" class="academic-link">知识问答应用落地实践 – 知识库构建（上）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-2" target="_blank" class="academic-link">知识问答应用落地实践 – 知识库构建（下）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-3/" target="_blank" class="academic-link">知识问答应用落地实践 – 知识召回调优（上）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-4" target="_blank" class="academic-link">知识问答应用落地实践 – 知识召回调优（下）</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/automated-rag-project-assessment-testing-using-trulens/" target="_blank" class="academic-link">使用 TruLens 做自动化 RAG 评估测试</a></li>
-        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/blogs/big-data/integrate-sparse-and-dense-vectors-to-enhance-knowledge-retrieval-in-rag-using-amazon-opensearch-service" target="_blank" class="academic-link">Integrate sparse and dense vectors to enhance knowledge retrieval in RAG using Amazon OpenSearch Service</a> <span class="academic-meta">AWS Global Blog</span></li>
+        <li><span class="academic-tag">Talk</span> <a href="https://www.infoq.cn/video/mggw3JCRiXY1TKIN8GPy" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}基于 RAG 构建生成式 AI 应用最佳实践与"避坑指南"{{ else }}Best Practices and Pitfalls for Building GenAI Apps with RAG{{ end }}</a> <span class="academic-meta">QCon 2024</span></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-1" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}知识问答应用落地实践 – 知识库构建（上）{{ else }}Knowledge QA in Practice – Knowledge Base Construction (Part 1){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-2" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}知识问答应用落地实践 – 知识库构建（下）{{ else }}Knowledge QA in Practice – Knowledge Base Construction (Part 2){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-3/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}知识问答应用落地实践 – 知识召回调优（上）{{ else }}Knowledge QA in Practice – Retrieval Optimization (Part 1){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/practice-of-knowledge-question-answering-application-based-on-llm-knowledge-base-construction-part-4" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}知识问答应用落地实践 – 知识召回调优（下）{{ else }}Knowledge QA in Practice – Retrieval Optimization (Part 2){{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/cn/blogs/china/automated-rag-project-assessment-testing-using-trulens/" target="_blank" class="academic-link">{{ if eq $lang "zh-cn" }}使用 TruLens 做自动化 RAG 评估测试{{ else }}Automated RAG Evaluation with TruLens{{ end }}</a></li>
+        <li><span class="academic-tag">Blog</span> <a href="https://aws.amazon.com/blogs/big-data/integrate-sparse-and-dense-vectors-to-enhance-knowledge-retrieval-in-rag-using-amazon-opensearch-service" target="_blank" class="academic-link">Integrate Sparse and Dense Vectors to Enhance Knowledge Retrieval in RAG</a> <span class="academic-meta">AWS Global Blog</span></li>
       </ul>
     </div>
   </section>
 
   {{/* ===== BOOK ===== */}}
   <section class="mb-10">
-    <h2 class="academic-section-title">{{ i18n "book_translation" | default "书籍翻译" }}</h2>
+    <h2 class="academic-section-title">{{ if eq $lang "zh-cn" }}书籍翻译{{ else }}Book Translation{{ end }}</h2>
     <ul class="academic-list">
       <li>
-        <a href="https://m.douban.com/book/subject/36906611" target="_blank" class="academic-link font-medium">生成式AI入门与AWS实战</a>
+        <a href="https://m.douban.com/book/subject/36906611" target="_blank" class="academic-link font-medium">{{ if eq $lang "zh-cn" }}生成式AI入门与AWS实战{{ else }}Generative AI on AWS{{ end }}</a>
+        {{ if eq $lang "zh-cn" }}
         <span class="text-neutral-500 dark:text-neutral-400">(Generative AI on AWS), 豆瓣 8.8, 译者之一, 2024 年度影响力译者奖</span>
+        {{ else }}
+        <span class="text-neutral-500 dark:text-neutral-400">(Chinese edition), Douban 8.8/10, Co-translator, 2024 Influential Translator Award</span>
+        {{ end }}
       </li>
     </ul>
   </section>
