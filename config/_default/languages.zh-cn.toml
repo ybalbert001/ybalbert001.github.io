@@ -16,6 +16,6 @@ title = "YuanBo Li - 技术主页"
   bio = "专注于大语言模型推理优化、AI应用平台和检索增强生成，服务头部互联网客户"
   links = [
     { email = "mailto:ybalbert@amazon.com" },
-    { github = "https://github.com/ybalbert" },
+    { github = "https://github.com/ybalbert001" },
     { bilibili = "https://space.bilibili.com/259231104" },
   ]

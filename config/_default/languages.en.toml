@@ -16,6 +16,6 @@ title = "YuanBo Li - Tech Portfolio"
   bio = "Focused on LLM inference optimization, AI application platforms, and retrieval-augmented generation"
   links = [
     { email = "mailto:ybalbert@amazon.com" },
-    { github = "https://github.com/ybalbert" },
+    { github = "https://github.com/ybalbert001" },
     { bilibili = "https://space.bilibili.com/259231104" },
   ]
