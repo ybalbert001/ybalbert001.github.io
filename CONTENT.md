@@ -15,7 +15,7 @@
 | 一句话介绍 | 专注于大语言模型推理优化、AI应用平台和检索增强生成，服务头部互联网客户 |
 | Email | ybalbert@amazon.com |
 | 微信公众号 | [AI猿智慧](https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g)，关注数 1209，文章数 49 |
-| B站 | [前滩猿神](https://space.bilibili.com/259231104)，粉丝 210，播放量 3028，视频 13 |
+| B站 | [前滩猿神](https://space.bilibili.com/259231104)，粉丝 800，播放量 16000，视频 14 |
 
 ---
 
@@ -31,7 +31,8 @@
 
 | 类型 | 内容 | 备注 |
 |------|------|------|
-| 自媒体(B站) | [大模型推理-深入浅出系列](https://space.bilibili.com/259231104/lists/8200803) | 播放量[3028] |
+| 自媒体(B站) | [大模型推理-深入浅出系列](https://space.bilibili.com/259231104/lists/8200803) | 播放量[16000] |
+| 工具网站 | [ inference-analzyer](https://inference-analyzer.app/) | 推理分析工具 |
 
 ---
 

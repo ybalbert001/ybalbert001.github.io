@@ -1,0 +1,49 @@
+# YuanBo Li (李元博) — Tech Portfolio
+
+> GenAI Specialist Solution Architect at Amazon Web Services (AWS). Focused on large
+> language model (LLM) inference optimization, the Dify application platform, LLM-based
+> translation, and retrieval-augmented generation (RAG). Co-translator of "Generative AI
+> on AWS" (Chinese edition, Douban 8.8) and 2024 Influential Translator Award winner.
+
+## About
+
+- Name: YuanBo Li (李元博)
+- Role: GenAI Specialist Solution Architect @ AWS
+- Focus areas: LLM Inference, RAG, Dify on AWS, LLM Translation, Fine-tuning
+- Homepage: https://ybalbert001.github.io/
+
+## Research & Technical Output
+
+### LLM Inference (2025 – present)
+Best practices for deploying open-source LLMs (DeepSeek, etc.) on AWS; performance
+benchmarking of inference engines (SGLang) across GPU instance types including B200.
+- Video series (Bilibili): https://space.bilibili.com/259231104/lists/8200803
+- Blog: https://aws.amazon.com/cn/blogs/china/claude-code-open-source-model-enterprise-practice/
+
+### GenAI Platform — Dify on AWS (2024 – 2025)
+Dify Top Contributor. Built the AWS ecosystem within Dify, making Amazon Bedrock the
+best-supported model provider and enabling SageMaker-deployed models to integrate with Dify.
+- Code: https://github.com/aws-samples/dify-aws-tool
+- Code: https://github.com/langgenius/dify
+- Blog: https://aws.amazon.com/cn/blogs/china/integrate-dify-and-aws-services-to-enable-more-flexible-translation-workflows/
+
+### LLM Translation (2024 – 2025)
+Best practices for LLM-based translation: terminology mapping, RAG optimization,
+fine-tuning, and workflow orchestration. Published a technical whitepaper at AWS Shanghai Summit 2025.
+- Code: https://github.com/aws-samples/rag-based-translation-with-dynamodb-and-bedrock
+- Blog: https://aws.amazon.com/cn/blogs/china/implementing-llm-translation-with-word-mapping-capabilities-based-on-aws-services/
+
+### RAG — Retrieval-Augmented Generation (2023 – 2024)
+Primary maintainer of the GCR RAG knowledge Q&A solution.
+- Code: https://github.com/aws-samples/private-llm-qa-bot
+- Blog: https://aws.amazon.com/blogs/big-data/integrate-sparse-and-dense-vectors-to-enhance-knowledge-retrieval-in-rag-using-amazon-opensearch-service
+
+## Book Translation
+- "Generative AI on AWS" (Chinese edition) — Co-translator, Douban 8.8/10,
+  2024 Influential Translator Award: https://m.douban.com/book/subject/36906611
+
+## Links
+- GitHub: https://github.com/ybalbert001
+- Bilibili: https://space.bilibili.com/259231104
+- WeChat public account (AI猿智慧): https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g
+- Email: ybalbert@amazon.com

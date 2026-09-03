@@ -4,6 +4,21 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
+# SEO / GEO
+enableStructuredBreadcrumbs = true
+keywords = [
+  "YuanBo Li", "李元博", "AWS GenAI", "Solution Architect",
+  "LLM Inference", "大模型推理", "RAG", "检索增强生成",
+  "Dify", "LLM Translation", "大模型翻译", "Amazon Bedrock",
+  "Amazon SageMaker", "Generative AI", "生成式AI"
+]
+
+# Search engine site verification.
+# 将 Google Search Console 提供的 verification code 填入下方 google = "..."
+[verification]
+  google = ""
+  bing = ""
+
 mainSections = ["posts"]
 
 [homepage]

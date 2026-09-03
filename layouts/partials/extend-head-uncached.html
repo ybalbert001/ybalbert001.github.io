@@ -1,0 +1,56 @@
+{{/* GEO/SEO enhancement: rich Person + ProfilePage structured data (page context) */}}
+{{ $isZh := eq .Site.Language.Lang "zh-cn" }}
+{{ $jobTitle := cond $isZh "生成式 AI 解决方案架构师" "GenAI Specialist Solution Architect" }}
+{{ $desc := cond $isZh "亚马逊云科技（AWS）生成式 AI 解决方案架构师，专注于大语言模型推理优化、Dify 应用平台、大模型翻译与检索增强生成（RAG）。" "GenAI Specialist Solution Architect at AWS, focused on LLM inference optimization, the Dify application platform, LLM-based translation, and retrieval-augmented generation (RAG)." }}
+
+{{/* Better social sharing image + large card */}}
+<meta name="twitter:image" content="{{ "android-chrome-512x512.png" | absURL }}">
+<meta property="og:image" content="{{ "android-chrome-512x512.png" | absURL }}">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ .Permalink }},
+  "inLanguage": "{{ .Site.Language.Lang }}",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://ybalbert001.github.io/#person",
+    "name": "{{ .Site.Params.Author.name }}",
+    "alternateName": {{ cond $isZh "\"李元博\"" "\"YuanBo Li (李元博)\"" | safeJS }},
+    "jobTitle": "{{ $jobTitle }}",
+    "description": "{{ $desc }}",
+    "url": "https://ybalbert001.github.io/",
+    "image": "{{ "android-chrome-512x512.png" | absURL }}",
+    "email": "ybalbert@amazon.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Amazon Web Services (AWS)",
+      "url": "https://aws.amazon.com"
+    },
+    "knowsAbout": [
+      "Large Language Model Inference",
+      "LLM Inference Optimization",
+      "Retrieval-Augmented Generation (RAG)",
+      "Dify",
+      "LLM Translation",
+      "Fine-tuning",
+      "Amazon Bedrock",
+      "Amazon SageMaker",
+      "Generative AI",
+      "SGLang",
+      "DeepSeek"
+    ],
+    "sameAs": [
+      "https://github.com/ybalbert001",
+      "https://space.bilibili.com/259231104",
+      "https://mp.weixin.qq.com/s/4KoSQbxQyIjiE4hBkqTh1g",
+      "https://m.douban.com/book/subject/36906611"
+    ]
+  }
+}
+</script>
+{{ end }}
